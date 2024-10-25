@@ -1,4 +1,4 @@
-﻿namespace dmitriyVanchinKt_42_21.Models
+﻿namespace DmitriyVanchinKt_42_21.Models
 {
     public class Discipline
     {

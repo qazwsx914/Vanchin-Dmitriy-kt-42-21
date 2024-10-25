@@ -1,4 +1,4 @@
-﻿namespace dmitriyVanchinKt_42_21.Database.Helpers
+﻿namespace DmitriyVanchinKt_42_21.Database.Helpers
 {
     public class ColumnType
     {

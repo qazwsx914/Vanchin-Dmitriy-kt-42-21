@@ -1,4 +1,4 @@
-using dmitriyVanchinKt_42_21.Database;
+using DmitriyVanchinKt_42_21.Database;
 using Microsoft.EntityFrameworkCore;
 using NLog;
 using NLog.Web;

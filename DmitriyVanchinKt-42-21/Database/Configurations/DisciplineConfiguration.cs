@@ -1,9 +1,9 @@
-﻿using dmitriyVanchinKt_42_21.Database.Helpers;
-using dmitriyVanchinKt_42_21.Models;
+﻿using DmitriyVanchinKt_42_21.Database.Helpers;
+using DmitriyVanchinKt_42_21.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace dmitriyVanchinKt_42_21.Database.Configurations
+namespace DmitriyVanchinKt_42_21.Database.Configurations
 {
     public class DisciplineConfiguration : IEntityTypeConfiguration<Discipline>
     {

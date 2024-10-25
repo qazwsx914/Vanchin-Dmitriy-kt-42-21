@@ -1,8 +1,8 @@
-﻿using dmitriyVanchinKt_42_21.Database.Configurations;
-using dmitriyVanchinKt_42_21.Models;
+﻿using DmitriyVanchinKt_42_21.Database.Configurations;
+using DmitriyVanchinKt_42_21.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace dmitriyVanchinKt_42_21.Database
+namespace DmitriyVanchinKt_42_21.Database
 {
     public class LecturerDbContext : DbContext
     {
