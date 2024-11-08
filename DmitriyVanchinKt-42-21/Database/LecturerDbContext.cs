@@ -10,6 +10,7 @@ namespace DmitriyVanchinKt_42_21.Database
         DbSet<Lecturer> Lecturers { get; set; }
         DbSet<Cathedra> Cathedras { get; set; }
         DbSet<Discipline> Disciplines { get; set; }
+        DbSet<Load> Loads { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //Добавляем конфигурации к таблицам

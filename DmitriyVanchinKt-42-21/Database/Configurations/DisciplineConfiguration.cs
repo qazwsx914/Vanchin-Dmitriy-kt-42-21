@@ -28,14 +28,6 @@ namespace DmitriyVanchinKt_42_21.Database.Configurations
                 .HasColumnName("c_discipline_name")
                 .HasColumnType(ColumnType.String).HasMaxLength(100)
                 .HasComment("Название дисциплины");
-
-            //
-            // Связь с преподавателем
-            builder.ToTable(TableName).
-                HasOne(p => p.Lecturer)
-                .WithMany(l => l.Disciplines)
-                .HasForeignKey(p => p.LecturerId)
-                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

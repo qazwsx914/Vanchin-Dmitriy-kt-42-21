@@ -39,17 +39,10 @@ namespace DmitriyVanchinKt_42_21.Database.Configurations
             // Связь с преподавателем-заведующим
             builder.ToTable(TableName)
                 .HasOne(p => p.HeadLecturer)
-                .WithMany() // Заведующий кафедрой не будет иметь коллекцию кафедр
-                .HasForeignKey(p => p.HeadLecturerId)
+                .WithOne() // Заведующий кафедрой не будет иметь коллекцию кафедр
+                .HasForeignKey<Cathedra>(p =>p.HeadLecturerId)
                 .OnDelete(DeleteBehavior.Restrict)
                 .HasConstraintName("fk_cathedra_head_lecturer_id");  // Заведующий кафедрой
-            // Связь "Один ко многим" между кафедрой и преподавателями
-            builder.ToTable(TableName)
-                .HasMany(p => p.Lecturers)  // Связь: одна кафедра имеет много преподавателей
-                .WithOne(p => p.Cathedra)  // Один преподаватель относится к одной кафедре
-                .HasForeignKey(p => p.CathedraId)  // У преподавателя внешний ключ на кафедру
-                .OnDelete(DeleteBehavior.Cascade)
-                .HasConstraintName("fk_lecturer_cathedra_id");
         }
     }
 }

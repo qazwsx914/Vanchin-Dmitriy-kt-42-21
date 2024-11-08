@@ -61,12 +61,19 @@ namespace DmitriyVanchinKt_42_21.Database.Configurations
             //Добавим явную автоподгрузку связанной сущности
             builder.Navigation(p => p.Cathedra)
                 .AutoInclude();
+            //builder.Navigation(p => p.Disciplines) 
+            //    .AutoInclude();
 
             //
             builder.HasOne(p => p.Cathedra)
-            .WithMany(c => c.Lecturers)
+            .WithMany()
             .HasForeignKey(p => p.CathedraId)
             .OnDelete(DeleteBehavior.Cascade);
+
+            //builder.HasOne(p=>p.Disciplines)
+            //   .WithMany()
+            //   .HasForeignKey(p=>p.DisciplineId) 
+            //   .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
