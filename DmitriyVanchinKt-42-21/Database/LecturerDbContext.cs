@@ -17,6 +17,7 @@ namespace DmitriyVanchinKt_42_21.Database
             modelBuilder.ApplyConfiguration(new LecturerConfiguration());
             modelBuilder.ApplyConfiguration(new CathedraConfiguration());
             modelBuilder.ApplyConfiguration(new DisciplineConfiguration());
+            modelBuilder.ApplyConfiguration(new LoadConfiguration());
         }
         public LecturerDbContext(DbContextOptions<LecturerDbContext> options) : base(options)
         {
