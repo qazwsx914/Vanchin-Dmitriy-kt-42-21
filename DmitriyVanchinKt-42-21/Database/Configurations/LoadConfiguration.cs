@@ -16,11 +16,11 @@ namespace DmitriyVanchinKt_42_21.Database.Configurations
                 .ValueGeneratedOnAdd();
             //Расписываем как будут называться колонки в БД, а так же их обязательность и тд
             builder.Property(p => p.LoadId)
-                .HasColumnName("load_id")
+                .HasColumnName("LoadId")
                 .HasComment("Идентификатор записи нагрузки");
             //Расписываем как будут называться колонки в БД, а так же их обязательность и тд
             builder.Property(p => p.OpeningHours)
-                .HasColumnName("LoadHours")
+                .HasColumnName("OpeningHours")
                 .HasComment("Часы работы");
 
             //

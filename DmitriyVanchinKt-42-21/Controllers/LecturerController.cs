@@ -17,10 +17,16 @@ namespace DmitriyVanchinKt_42_21.Controllers
             _logger = logger;
             _lecturerService = lecturerService;
         }
-        [HttpPost(Name="GetLecturersByCathedra")]
+        [HttpPost("GetLecturersByCathedra")]
         public async Task<IActionResult> GetLecturersByCathedraAsync(LecturerCathedraFilter filter, CancellationToken cancellationToken = default)
         {
             var lecturers = await _lecturerService.GetLecturersByCathedraAsync(filter, cancellationToken);
+            return Ok(lecturers);
+        }
+        [HttpPost("GetLecturersByName")]
+        public async Task<IActionResult> GetLecturersByNameAsync(LecturerNameFilter filter, CancellationToken cancellationToken = default)
+        {
+            var lecturers = await _lecturerService.GetLecturersByNameAsync(filter, cancellationToken);
             return Ok(lecturers);
         }
     }
